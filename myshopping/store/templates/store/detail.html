@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>查看店铺详情</title>
+    </head>
+    <body>
+        <h1>店铺详情</h1>
+        <h2>{{msg}}</h2>
+        <table border="1px">
+            <tr>
+                <td>店铺封面</td>
+                <td><img style="width: 100px;height: 100px" src="/{{store.cover}}" alt=""></td>
+            </tr>
+            <tr>
+                <td>店铺名称</td>
+                <td>{{store.name}}</td>
+            </tr>
+            <tr>
+                <td>店铺状态</td>
+                <td>
+                    {% if store.status == 0 %}
+                        <h3>正在营业</h3>
+                        <a href="{% url 'store:change_stu' store.id 1 %}">暂停营业</a>
+                        <a href="{% url 'store:change_stu' store.id 2 %}">删除店铺</a>
+                    {% elif store.status == 1 %}
+                        <h3>暂停营业</h3>
+                        <a href="{% url 'store:change_stu' store.id 0%}">重新营业</a>
+                        <a href="{% url 'store:change_stu' store.id 2%}">删除店铺</a>
+                    {% elif store.status == 2 %}
+                        <p>店铺已经删除</p>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>操作</td>
+                <td><a href="{% url 'store:update' store.id %}">修改店铺</a></td>
+            </tr>
+        </table>
+    </body>
+</html>

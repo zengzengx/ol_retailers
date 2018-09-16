@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>增加店铺</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'js\bootstrap-3.3.7-dist\css\bootstrap.css' %}">
+        <script src="{% static 'js\lib\jquery-2.1.4.js' %}"></script>
+    </head>
+    <body>
+        <h1>请填写下面信息</h1>
+        <form action="{% url 'store:add' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label>店铺名称：</label>
+            <input type="text" name="name" id="name" placeholder="请填写店铺名称"><span></span><br>
+            <label>店铺封面：</label>
+            <input type="file" name="cover" id="cover" placeholder="请上传店铺封面"><br>
+            <label>店铺描述：</label>
+            <textarea name="intro" id="intro" cols="30" rows="10" placeholder="请填写店铺描述"></textarea><br>
+            <input type="submit" id="open" disabled value="开启店铺">
+        </form>
+        <script>
+            $(function () {
+                $("#name").blur(function () {
+                    var len = $("#name").val().trim().length;
+                    if (len<=0){
+                        $("#name").next().html("店铺名不能为空");
+                        $("#open").prop("disabled","disabled")
+                    }else {
+                        $("#name").next().html("店铺名可用");
+                        $("#open").removeAttr("disabled")
+
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

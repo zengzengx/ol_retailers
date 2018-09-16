@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录页面</title>
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'js\bootstrap-3.3.7-dist\css\bootstrap.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/visited.css' %}"/>
+		<script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+		<script src="{% static 'js/visited.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/cookie.js' %}"></script>
+	</head>
+	<body>
+		<div class="login_wrapper">
+			<div class="login_container">
+				<div class="login_header">
+					<a href="../../">魅力惠</a>
+				</div>
+				<div class="login_content">
+					<form class="login_main" method="post" action="{% url 'user:user_login' %}">
+						{% csrf_token %}
+						<div class="free_login">
+							<h2 style="color:#000">会员登录</h2>
+							<span>没有账号？<a href="{% url 'user:register' %}">免费注册</a></span>
+						</div>
+						<div class="login_bar">
+                            {{msg}}<input type="hidden" name="next" value="{{next_url}}">
+							<ul>
+								<li>
+									<span>账户名:</span>
+									<input type="text" id="username"  name="username"/>
+								</li>
+								<li>
+									<span>密码:</span>
+									<input type="password" name="password"   id="password"/>
+								</li>
+								<li id="rdm_img">
+									<span>验证码:</span>
+									<input type="text" name="code" id="code">
+									<img id="img" src="{% url 'commons:code' %}" alt="" style="cursor: pointer" onclick="refresh_check_code()">
+								</li>
+							</ul>
+						</div>
+						<div class="login_btn">
+							<button type="submit" class="btn btn-danger">会员登录</button>
+						</div>
+						<div class="login_rule_p">
+							<p class="login_rule_p2">
+								<span id="chooseRemind" class="chengepst selected">复选框</span>下次自动登录
+							</p>
+							<a href="javascript:;"><span>忘记密码</span></a>
+						</div>
+						<div class="visited_partner">
+							<h4>联名登录:</h4>
+							<a href="javascript:;" class="visited_weibo"></a>
+							<a href="javascript:;" class="visited_zhifubiao"></a>
+						</div>
+						<div class="xian"></div>
+						<div class="login_code">
+							<img src="/static/images/img/login_code.jpg"/>
+							<p>
+								扫描二维码或发送短信
+								<br />
+								“MLH”到“12114”
+								<br />
+								下载APP尊享独家优惠
+							</p>
+						</div>
+
+					</form>
+
+				</div>
+				<div class="footer_advantage">
+					<ul class="footer_advantage_list">
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv1">100%品牌授权正品</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv2">满688免运费</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv3">7天无条件退货</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv4">超值折扣</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv5">9点限时闪购</a></li>
+						<li class="footer_advantage_li footer_advantage_right"><a href="javascript:;" class="adv6">400 - 644 - 6698</a></li>
+					</ul>
+				</div>
+				<p class="footer_copyright">COPYRIGHT&copy;2016&nbsp;杭州魅俪信息技术有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1</p>
+
+			</div>
+		</div>
+		<script>
+             function refresh_check_code() {
+                 $("#img").attr("src","/code/?search=" + Math.random());
+             }
+        </script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+.login_bar input{background:0;}
+.login_rule_p a{color:#000;}
+.login_rule_p{height:17px;margin-top:10px;}
+.login_rule_p:after{containt:".";display: block;clear: both;height:0;overflow: hidden;visibility: hidden;}
+.login_rule_p .login_rule_p2{width:200px;margin:0;}
+.login_rule_p a span{text-decoration: underline;float: right;}
+.visited_partner{width:350px;height:auto;overflow: hidden;margin:20px 0 0 0;}
+.visited_partner h4{width:75px;float: left;text-align: right; margin-right:15px;white-space: nowrap;} 
+.visited_zhifubiao{width:44px;height:17px;overflow: hidden;background: url(../images/img/icon_alipay.png) no-repeat;float: left;margin: 0 25px 0 0;cursor: pointer;display: inline;}
+.visited_weibo{background: url(../images/img/icon_sina.png) no-repeat; width:20px;height:17px;overflow: hidden; margin: 0 25px 0 0; cursor: pointer;display: inline;float: left;}
+.login_rule_p a:hover{color:#db2725}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

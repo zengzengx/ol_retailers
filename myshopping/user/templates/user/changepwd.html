@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>修改密码</title>
+         {% load static %}
+        <link rel="stylesheet" href="{% static 'js\bootstrap-3.3.7-dist\css\bootstrap.css' %}">
+        <script src="{% static 'js\lib\jquery-2.1.4.js' %}"></script>
+        <script src="{% static 'js\register.js' %}"></script>
+    </head>
+    <body>
+        <h1>修改密码</h1>
+        <form action="{% url 'user:changepwd' request.user.id %}" method="post">
+            {% csrf_token %}
+            <label>旧密码：</label>
+            <input type="password" id="pwd" name="pwd" placeholder="请输入原来密码">
+            <span></span>
+            <br>
+            <label>新密码：</label>
+            <input type="password" id="password" name="password" placeholder="请输入新密码">
+            <span></span>
+            <br>
+            <label>确认密码：</label>
+            <input type="password" id="confirmpwd" name="confirmpwd" placeholder="请再次输入密码">
+            <span></span>
+            <br>
+            <button type="submit" onclick="return confirm('确定修改吗？')" disabled class="btn btn-default reg_form">点击修改</button>
+            <a href="{% url 'user:changepwd' request.user.id %}" class="btn btn-default">取消修改</a>
+        </form>
+    </body>
+    <script>
+        $(function () {
+            $("#pwd").blur(function () {
+                params = {"pwd":$("#pwd").val()};
+                console.log(params);
+                $.get("/user/checkpwd/",params,function (data) {
+                    console.log(data);
+                    if (data.msg){
+                        $("#pwd").next().html("原密码输入正确")
+                    }else {
+                        $("#pwd").next().html("原密码输入错误")
+                    }
+                },"json")
+            })
+        })
+    </script>
+</html>

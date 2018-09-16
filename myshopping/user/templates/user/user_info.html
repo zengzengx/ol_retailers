@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>用户资料</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'js\bootstrap-3.3.7-dist\css\bootstrap.css' %}">
+        <script src="{% static 'js\lib\jquery-2.1.4.js' %}"></script>
+        <script src="{% static 'js\register.js' %}"></script>
+    </head>
+    <body>
+        <button id="show_info">编辑个人信息</button>
+        <table width="300px" class="info">
+            <tr>
+                <td>用户头像：</td>
+                <td>
+                    {% if request.user.userother.header %}
+                        <img style="width: 100px;height: 100px" src="/{{request.user.userother.header}}" alt="">
+                    {% else %}
+                        <img style="width: 100px;height: 100px" src="/static/images/header/default.jpg" alt="">
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>用户名称：</td><td>{{request.user.username}}</td>
+            </tr>
+            <tr>
+                <td>用户昵称：</td><td>{{request.user.userother.nickname}}</td>
+            </tr>
+            <tr>
+                <td>用户年龄：</td><td>{{request.user.userother.age}}</td>
+            </tr>
+            <tr>
+                <td>用户手机：</td><td>{{request.user.userother.phone}}</td>
+            </tr>
+            <tr>
+                <td>用户邮箱：</td><td>{{request.user.email}}</td>
+            </tr>
+            <tr>
+                <td>用户性别：</td><td>{{request.user.userother.gender}}</td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'store:list' %}">查看自己店铺列表</a></td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'store:add' %}">创建店铺</a></td>
+            </tr>
+        </table>
+
+
+        <table width="500px" style="display: none" class="editor_info">
+            <form action="{% url 'user:user_info' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <tr>
+                    <td>用户头像：</td>
+                    <td>
+                         {% if request.user.userother.header %}
+                            <img style="width: 100px;height: 100px" src="/{{request.user.userother.header}}" alt="">
+                         {% else %}
+                            <img style="width: 100px;height: 100px" src="/static/images/header/default.jpg" alt="">
+                         {% endif %}
+                        <input type="file" name="header" id="header" value="{{request.user.userother.header}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>用户名称：</td><td><input disabled type="text" value="{{user.username}}"></td>
+                </tr>
+                <tr>
+                    <td>用户昵称：</td><td><input disabled type="text" id="nickname" name="nickname" value="{{request.user.userother.nickname}}">
+                </tr>
+                <tr>
+                    <td>用户年龄：</td><td><input type="number" id="age" name="age" value="{{request.user.userother.age}}"><span class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>用户手机：</td><td><input type="number" id="phone" name="phone" value="{{request.user.userother.phone}}"><span class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>用户邮箱：</td><td><input type="email" id="email" name="email" value="{{user.email}}"><span class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>用户性别：</td>
+                    <td>
+                        {% if user.gender == '男'%}
+                        <input type="radio" checked name="gender"  value="男">男
+                        <input type="radio" name="gender"  value="女">女
+                        {% else %}
+                        <input type="radio"  name="gender"  value="男">男
+                        <input type="radio" checked name="gender"  value="女">女
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" class="change" value="修改用户"></td>
+                </tr>
+            </form>
+        </table>
+        <p><a href="{% url 'user:changepwd' request.user.id %}">修改密码</a></p>
+        <a href="{% url 'user:user_logout'%}">退出登录</a>
+        <script>
+            $(function() {
+                var flag = false;
+                $("#show_info").click(function () {
+
+                    if (!flag) {
+                        flag = true;
+                        console.info($(this));
+                        $(this).html("取消编辑");
+                        $(".info").hide();
+                        $(".editor_info").show()
+                    } else {
+                        flag = false;
+                        $(this).html("编辑个人信息");
+                        $(".info").show();
+                        $(".editor_info").hide()
+                    }
+                })
+            })
+
+        </script>
+    </body>
+</html>

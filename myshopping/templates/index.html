@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>魅力惠时尚奢侈品牌闪购网站 奢侈品排行榜销售NO.1 2000多个国际品牌官方合作伙伴-魅力惠官方网站</title>
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/stickUp.min.js' %}"></script>
+		<script src="{% static 'js/index.js' %}"></script>
+		<script src="{% static 'js/jquery.cookie.js' %}"></script>
+		<script src="{% static 'js/shopcart.js' %}"></script>
+		<script src="{% static 'js/index_cookie.js' %}"></script>
+	</head>
+	<body>
+		<!--右侧返回顶部-->
+		<div class="returnTop">
+			<div class="top">
+				<span>100%</span>
+				<br>
+				官方正品
+			</div>
+			<div class="erweima">
+				<span>下载APP</span>
+				<img src="{% static 'images/img/fix_APP_code.png'%}"/>
+				<span>微信公众号</span>
+				<img src="{% static 'images/img/fix_wechat_code.png' %}" />
+			</div>
+			<div class="clickOn" style="display: none;">
+				<a href="javascript:;">返回顶部</a>
+			</div>
+		</div>
+
+		<!--右侧返回顶部 end-->
+		<!--*******************************************-->
+		<!--头部-->
+		<div id="header">
+			<div id='quick-access'>
+				<div id="quick_access_left" class="fl">
+					<ul id="topDiv">
+						<li class="quick-img"><img src="{% static 'images/img/zhuceyouli.gif'%}" alt="" /></li>
+						<li><a href="{% url 'user:register' %}" style="color:red">注册有礼</a></li>
+						<li><span class="space">|</span></li>
+						<li><a href="{% url 'user:user_login' %}">登录</a></li>
+					</ul>
+				</div>
+				<div id="quick_access_right" class="fr">
+					<ul class="quick_access_right_list">
+						<li><a href="javascript:;">在线咨询</a></li>
+						<li class="space">|</li>
+						<li  class="quick_hover">
+							<a href="{% url 'store:add' %}">创建店铺</a>
+							<div class="mobile-app" style="display: none;">
+								<img src="/static/images/img/QR_code.png"/>
+								<p>扫码下载APP</p>
+							</div>
+						</li>
+						<li  class="space">|</li>
+						<li><a href="javascript:;" class="sina">新浪微博</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="branding">
+				<a id="logo" class="fl" title="魅力惠MEI.COM 时尚奢品 限时折扣" href='javascript:;'>
+					魅力惠
+				</a>
+				<a id="logo_slogan" class="fl" href="javascript:;">时尚奢品 限时折扣</a>
+			</div>
+		</div>
+
+		<!--导航-->
+		<div id="nav_container">
+			<div id="nav">
+				<div id="nav_left">
+					<ul>
+						<li class="nav_left_list"><a href="javascript:;" class="active nav_list">首页</a></li>
+						<!--****************导航的女士部分******************-->
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">女士</a>
+							<div class="woman" style="display: none;">
+								<div class="woman_left fl">
+									<div class="hotactivity">热门活动</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">MANOUSH 精品女装（满减）</a></li>
+										<li><a href="javascript:;">SHELLYS & AMIU 潮流英伦女鞋</a></li>
+										<li><a href="javascript:;">哥本哈根萌宠 这个初秋萌化你</a></li>
+										<li><a href="javascript:;">CROCUS 德国时尚饰品</a></li>
+										<li><a href="javascript:;">安莉芳“安”享当下女士内衣专场</a></li>
+										<li><a href="javascript:;">TOMS休闲女鞋</a></li>
+										<li><a href="javascript:;">精彩炫彩 女士包袋配饰</a></li>
+										<li><a href="javascript:;">SONIA RYKIEL & SONIA BY SONIA RYKIEL 法国设计师女装</a></li>
+									</ul>
+									<a href="javascript:;" class="fr">查看所有活动</a>
+								</div>
+								<div class="woman_right fl">
+									<div class="hotactivity">商品分类</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">眼镜</a></li>
+										<li><a href="javascript:;">配饰</a></li>
+										<li><a href="javascript:;">手表&首饰</a></li>
+										<li><a href="javascript:;">包袋</a></li>
+										<li><a href="javascript:;">服装</a></li>
+										<li><a href="javascript:;">鞋履</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+
+						<!--****************导航的男士部分******************-->
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">男士</a>
+							<div class="man" style="display: none;">
+								<div class="man_left fl">
+									<div class="hotactivity">热门活动</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">TOMS 休闲男鞋及亲子鞋</a></li>
+										<li><a href="javascript:;">MONTBLANC 型格精品男士眼镜</a></li>
+										<li><a href="javascript:;">TED BAKER 英伦绅士服装配饰</a></li>
+										<li><a href="javascript:;">年中特惠 意大利经典男士单品</a></li>
+										<li><a href="javascript:;">ANDREW MARC 初秋新品男士皮衣特惠</a></li>
+										<li><a href="javascript:;">DUNHILL 奢华低调 绅士单品</a></li>
+										<li><a href="javascript:;">VERSACE COLLECTION 意式古典贵族印花男装</a></li>
+										<li><a href="javascript:;">老佛爷男士早秋上新 尽是新式浪潮</a></li>
+									</ul>
+									<a href="javascript:;" class="fr">查看所有活动</a>
+								</div>
+								<div class="man_right fl">
+									<div class="hotactivity">商品分类</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">配饰</a></li>
+										<li><a href="javascript:;">鞋履</a></li>
+										<li><a href="javascript:;">眼镜</a></li>
+										<li><a href="javascript:;">服装</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!--****************导航的 美妆  部分******************-->
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">美妆</a>
+							<div class="beauty" style="display: none;">
+								<div class="beauty_left fl">
+									<div class="hotactivity">热门活动</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">MEDIUHEAL 美迪惠尔面膜专场</a></li>
+										<li><a href="javascript:;">PALSISPA 法国奢华SPA护肤</a></li>
+										<li><a href="javascript:;">PTR 彼得罗夫护肤品专场</a></li>
+										<li><a href="javascript:;">REFA 风靡日本美容神器</a></li>
+										<li><a href="javascript:;">面面俱到拯救问题肌 面膜专场</a></li>
+										<li><a href="javascript:;">BANANA UMBRELLA 防晒小黑伞（满折）</a></li>
+										<li><a href="javascript:;">SHISEIDO PROFESSIONAL 资生堂专业美发</a></li>
+										<li><a href="javascript:;">家好月圆双节送，中秋节教师节礼品专场</a></li>
+									</ul>
+									<a href="javascript:;" class="fr">查看所有活动</a>
+								</div>
+								<div class="beauty_right fl">
+									<div class="hotactivity">商品分类</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">香氛</a></li>
+										<li><a href="javascript:;">护肤</a></li>
+										<li><a href="javascript:;">美发</a></li>
+										<li><a href="javascript:;">彩妆</a></li>
+										<li><a href="javascript:;">男士</a></li>
+										<li><a href="javascript:;">保健</a></li>
+										<li><a href="javascript:;">美体</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">家居</a>
+							<div class="furniture" style="display: none;">
+								<div class="furniture_left fl">
+									<div class="hotactivity">热门活动</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">HOMES-UP 家居饰品</a></li>
+										<li><a href="javascript:;">HOMES-UP 餐桌配件</a></li>
+										<li><a href="javascript:;">环球美食 中秋精选</a></li>
+										<li><a href="javascript:;">DAYDREAM & CABEAU 差旅神器</a></li>
+										<li><a href="javascript:;">进口 水晶酒具</a></li>
+										<li><a href="javascript:;">BRITA 碧然德滤水壶</a></li>
+										<li><a href="javascript:;">PORTMEIRION 英国进口瓷器</a></li>
+										<li><a href="javascript:;">WOLL 德国进口不粘锅</a></li>
+									</ul>
+									<a href="javascript:;" class="fr">查看所有活动</a>
+								</div>
+								<div class="furniture_right fl">
+									<div class="hotactivity">商品分类</div>
+									<ul class="hotactivity_list furniture_right_list1 fl">
+										<li><a href="javascript:;">卫浴</a></li>
+										<li><a href="javascript:;">办公&礼品</a></li>
+										<li><a href="javascript:;">食品</a></li>
+										<li><a href="javascript:;">其他</a></li>
+										<li><a href="javascript:;">摆件</a></li>
+										<li><a href="javascript:;">3C数码产品</a></li>
+										<li><a href="javascript:;">厨具</a></li>
+										<li><a href="javascript:;">家电</a></li>
+									</ul>
+									<ul class="hotactivity_list furniture_right_list2 fl">
+										<li><a href="javascript:;">床品</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!--**********************婴童部分****************************-->
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">婴童</a>
+							<div class="child" style="display: none;">
+								<div class="child_left fl">
+									<div class="hotactivity">热门活动</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">RYKIEL ENFANT 童装</a></li>
+										<li><a href="javascript:;">FISHER PRICE 宝宝最爱的玩具</a></li>
+										<li><a href="javascript:;">JACADI 儿童专场</a></li>
+										<li><a href="javascript:;">JACADI 宝宝专场</a></li>
+										<li><a href="javascript:;">HAPE 德国益智玩具</a></li>
+										<li><a href="javascript:;">PALL SMITH & TRUSSARDI 奢华童装</a></li>
+										<li><a href="javascript:;">JUZI STORE 黑白经典</a></li>
+										<li><a href="javascript:;">JUZI STORE 乐趣色彩</a></li>
+									</ul>
+									<a href="javascript:;" class="fr">查看所有活动</a>
+								</div>
+								<div class="child_right fl">
+									<div class="hotactivity">商品分类</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">服装</a></li>
+										<li><a href="javascript:;">鞋履</a></li>
+										<li><a href="javascript:;">其他</a></li>
+										<li><a href="javascript:;">母婴</a></li>
+										<li><a href="#">玩具</a></li>
+										<li><a href="javascript:;">配饰</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">老佛爷奥莱</a>
+							<div class="Lafayette"  style="display: none;">
+								<div class="Lafayette_left fl">
+									<div class="hotactivity">热门活动</div>
+									<ul class="hotactivity_list">
+										<li><a href="javascript:;">RYKIEL ENFANT 童装</a></li>
+										<li><a href="javascript:;">FISHER PRICE 宝宝最爱的玩具</a></li>
+										<li><a href="javascript:;">JACADI 儿童专场</a></li>
+										<li><a href="javascript:;">JACADI 宝宝专场</a></li>
+										<li><a href="javascript:;">HAPE 德国益智玩具</a></li>
+										<li><a href="javascript:;">PALL SMITH & TRUSSARDI 奢华童装</a></li>
+										<li><a href="javascript:;">JUZI STORE 黑白经典</a></li>
+										<li><a href="javascript:;">JUZI STORE 乐趣色彩</a></li>
+									</ul>
+									<a href="javascript:;" class="fr">查看所有活动</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav_left_list"><a href="javascript:;" class="nav_list">即将推出</a></li>
+					</ul>
+				</div>
+				<div id="nav_right">
+					<ul class="nav_right_list">
+						<li class="li1 nav_right_list goodsCount">0</li>
+						<li class="space nav_right_list">|</li>
+						<li class="nav_right_list goodsprice">￥0.00</li>
+					</ul>
+					<div class="nav_shopping_bag" style="display: none;">
+						<div class="nav_shopbag_close">
+							<a href="javascript:void(0);" class="nav_button_close">关闭</a>
+						</div>
+						<div class="inner_none">购物袋暂无商品</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--banner大图-->
+		<div id="banner">
+			<h2><a href="javascript:;"><img src="/static/images/img/index_banner2.jpg"/></a></h2>
+		</div>
+
+		<!--主要内容-->
+		<div id="content">
+			<div id="content_bg_left"></div>
+			<div id="content_bg_right"></div>
+			<div id="commen_content">
+				<div id="index_content_top">
+					<a href="javascript:;"><img src="/static/images/img/index_content1.jpg"/></a>
+				</div>
+				<div id="content_day_new">
+					<!--****************************今日上新**********************-->
+					<p class="content_tit"><span>[</span><span class="tit">今日上新</span><span>]</span></p>
+					<div class="content-main  clearfix">
+						<!--    这是第一排的内容        -->
+						<div class="today_new clearfix">
+							<div class="today_new_left">
+								<dl class="content-main-block fl">
+									<dt class="content_main_img">
+										<a href="javascipt:;"><img src="/static/images/img/index_dayNew1.jpg"/></a>
+										<a href="javascript:;" class="content_main_goods" style="display: none;">
+											<table style="border-collapse: collapse;border-spacing: 0;">
+												<tr>
+													<td class="content_main_goods_td">
+														<p class="content_main_goods_p1">7天后活动结束</p>
+													</td>
+												</tr>
+											</table>
+										</a>
+									</dt>
+									<dd class="content_main_cen"><a href="javascript:;">
+										<span class="content_main_cen1">LOTTUSSE 匠心工艺 典藏男士鞋包</span>
+										<span class=" content_main_span2" style="color:#db2726">
+											<span class="content_main_cen2">2.5</span>
+											<span class="content_main_cen3">折起</span>
+										</span>
+
+									</a></dd>
+								</dl>
+
+								<dl class="content-main-block fl havelrmargin">
+									<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew2.jpg"/></a>
+										<a href="javascript:;" class="content_main_goods" style="display: none;">
+											<table style="border-collapse: collapse;border-spacing: 0;">
+												<tr>
+													<td class="content_main_goods_td">
+														<p class="content_main_goods_p1">7天后活动结束</p>
+													</td>
+												</tr>
+											</table>
+										</a>
+									</dt>
+									<dd class="content_main_cen"><a href="javascript:;">
+										<span class="content_main_cen1">PORTS 新季魅力穿搭</span>
+										<span class=" content_main_span2" style="color:#db2726">
+											<span class="content_main_cen2">2.7</span>
+											<span class="content_main_cen3">折起</span>
+										</span>
+
+									</a></dd>
+								</dl>
+								<dl class="content-main-block fl">
+									<dt class="content_main_img">
+										<a href="javascipt:;"><img src="/static/images/img/index_dayNew3.jpg"/></a>
+										<a href="javascript:;" class="content_main_goods" style="display: none;">
+											<table style="border-collapse: collapse;border-spacing: 0;">
+												<tr>
+													<td class="content_main_goods_td">
+														<p class="content_main_goods_p1">7天后活动结束</p>
+													</td>
+												</tr>
+											</table>
+										</a>
+									</dt>
+									<dd class="content_main_cen"><a href="javascript:;">
+										<span class="content_main_cen1">PORTS 1961 演绎都市优雅</span>
+										<span class="fr content_main_span2" style="color:#db2726">
+											<span class="content_main_cen2">2.5</span>
+											<span class="content_main_cen3">折起</span>
+										</span>
+
+									</a></dd>
+								</dl>
+
+								<dl class="content-main-block fl havelrmargin">
+									<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew4.jpg"/></a>
+										<a href="javascript:;" class="content_main_goods" style="display: none;">
+											<table style="border-collapse: collapse;border-spacing: 0;">
+												<tr>
+													<td class="content_main_goods_td">
+														<p class="content_main_goods_p1">7天后活动结束</p>
+													</td>
+												</tr>
+											</table>
+										</a>
+									</dt>
+									<dd class="content_main_cen"><a href="javascript:;">
+										<span class="content_main_cen1">精品大牌 眼镜</span>
+										<span class="fr content_main_span2" style="color:#db2726">
+											<span class="content_main_cen2">2</span>
+											<span class="content_main_cen3">折起</span>
+										</span>
+
+									</a></dd>
+								</dl>
+							</div>
+							<div class="today_new_right fl">
+								<ul class="index_turn">
+									<li class="fl"><a href="javascript:;"><img src="/static/images/img/app_index.jpg"/></a></li>
+									<li class="fl"><a href="javascript:;"><img src="/static/images/img/liujialing.jpg"/></a></li>
+									<li class="fl"><a href="javascript:;"><img src="/static/images/img/app_index.jpg"/></a></li>
+									<li class="fl"><a href="javascript:;"><img src="/static/images/img/liujialing.jpg"/></a></li>
+								</ul>
+								<div class="page_left"></div>
+								<div class="page_right"></div>
+								<div class="pageBtn">
+									<a href="javascript:;" class="pageBtn1 active" ></a>
+									<a href="javascript:;" class="pageBtn1"></a>
+								</div>
+							</div>
+						</div>
+						<!--    这是第三排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew5.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">PAUL& SHARK  闲适优雅 格调男装</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew6.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">CAMELIO TOSCALINI  初秋摩登女鞋(满减)</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew07.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">KENZO 缤纷色彩大牌围巾</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--这是第四排的内容-->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew08.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">VIVA 西班牙璀璨宫廷风首饰</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">0.5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew09.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">SHISEIDO 护肤彩妆当季特卖</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1.7</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew010.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">PLAYLOUNGE 买手概念女装</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.3</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--这是第五排的内容-->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew011.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">REIMA  芬兰功能性童装专场</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.7</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew012.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">REIMA  芬兰功能性鞋靴配饰专场 </span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.1</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew013.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">ELIZABETH ARDEN 雅顿畅销护肤品</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1.7</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew014.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">KIEHL'S 科颜氏护肤品专场</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">4.2</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew015.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">逛遍欧美只为它 欧美尖货合集</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+					</div>
+
+
+					<!--********************热卖品牌*******************-->
+					<p class="content_tit hot_sale"><span>[</span><span class="tit">热卖品牌</span><span>]</span></p>
+					<div class="content-main">
+						<!--    这是第一排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew016.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1"> 设计师 潮鞋集合（已补货）</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1.2</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew017.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">高端设计师 男女混合鞋履配饰</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew018.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">高端设计师 女士包袋配饰</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--    这是第二排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew019.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">ZHUELLA 细腻色泽天然淡水珍珠专场</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew020.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">奢华 男鞋（满减）</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew021.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">YA-MAN 日本美容仪器</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">8.5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--    这是第三排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew022.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">利快 创意家居</span>
+								<span class="fr content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1.9</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+					</div>
+
+					<!--****************************女士活动*****************************-->
+					<p class="content_tit"><span>[</span><span class="tit">女士活动</span><span>]</span></p>
+					<div class="woman-bargain">
+						<!--********女士活动下占据两张图片大的导航图*********-->
+						<div class="woman-bargain-block1">
+							<div class="woman-top"></div>
+							<div class="woman-bottom">
+								<p class="wbot1">
+									<a href="javascript:;">配饰</a>
+									<a href="javascript:;">服装</a>
+									<a href="javascript:;">包袋</a>
+									<a href="javascript:;">鞋履</a>
+								</p>
+								<p class="wbot1">
+									<a href="javascript:;">眼镜</a>
+									<a href="javascript:;">手表&首饰</a>
+								</p>
+								<p class="wbot3">
+									<a href="javascript:;">查看更多<span>></span></a>
+								</p>
+							</div>
+						</div>
+							<!--第一排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew024.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">TRANOI 意大利精品女士鞋履</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew025.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">NAUTICA 女装(满折)</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--第二排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew026.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">LOFAN 女士内衣</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew027.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">OPENING CEREMONY 初秋新品女装及鞋履包袋</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.8</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--    这是第三排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew028.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">MANOUSH 精品女装（满减）</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew029.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">A.T ATSURO TAYAMA 日本简约日常通勤女装</span>
+								<span class=" content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew030.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">ATSURO TAYAMA 日本高端时装哲学</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+					</div>
+					<!--****************男士活动***************-->
+					<p class="content_tit"><span>[</span><span class="tit">男士活动</span><span>]</span></p>
+					<div class="man-bargain">
+						<!--********男士活动下占据两张图片大的导航图*********-->
+						<div class="man-bargain-block1">
+							<div class="man-top"></div>
+							<div class="man-bottom">
+								<p class="wbot1">
+									<a href="javascript:;">配饰</a>
+									<a href="javascript:;">服装</a>
+									<a href="javascript:;">眼镜</a>
+									<a href="javascript:;">鞋履</a>
+								</p>
+								<p class="wbot3">
+									<a href="javascript:;">查看更多<span>></span></a>
+								</p>
+							</div>
+						</div>
+							<!--第一排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew034.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">TRANOI 意大利精品男士鞋履</span>
+								<span class=" content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew035.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">NAUTICA 男装(满折)</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.2</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--第二排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew036.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">OPENING CEREMONY 初秋新品男装及鞋履</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.8</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew0037.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">BASE LONDON 英伦精品男鞋</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--    这是第三排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew0038.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">IMPETUS 进口男士内衣专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew037.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">NOIDINOTTE 男士时尚家居服</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.6</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew038.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">老佛爷男士早秋上新  尽是新式浪潮</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">1</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+							</a></dd>
+						</dl>
+					</div>
+
+					<!--******************美妆活动*******************-->
+					<p class="content_tit"><span>[</span><span class="tit">美妆活动</span><span>]</span></p>
+					<div class="beauty-bargain">
+						<!--********美妆活动活动下占据两张图片大的导航图*********-->
+						<div class="beauty-bargain-block1">
+							<div class="beauty-top"></div>
+							<div class="beauty-bottom">
+								<p class="wbot1">
+									<a href="javascript:;">香氛</a>
+									<a href="javascript:;">美发</a>
+									<a href="javascript:;">护肤</a>
+									<a href="javascript:;">彩妆</a>
+								</p>
+								<p class="wbot1">
+									<a href="javascript:;">保健</a>
+									<a href="javascript:;">美体</a>
+									<a href="javascript:;">男士</a>
+								</p>
+								<p class="wbot3">
+									<a href="javascript:;">查看更多<span>></span></a>
+								</p>
+							</div>
+						</div>
+							<!--第一排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew039.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">LYTESS 法国高端热销瘦身款（满赠）</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">5.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew040.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">HELENA RUBINSTEIN 赫莲娜高端彩妆护肤</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">4.8</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--第二排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew041.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">CLINIQUE 倩碧护肤品专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew042.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">面面俱到拯救问题肌 面膜专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--    这是第三排的内容        -->
+						<dl class="content-main-block fl">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew043.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">SK-II 日本殿堂级护肤品</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">6.5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew044.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">REFA 风靡日本美容神器</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">7</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew045.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">PTR 彼得罗夫护肤品专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+							</a></dd>
+						</dl>
+					</div>
+					<!--****************家居活动***************-->
+					<p class="content_tit"><span>[</span><span class="tit">家居活动</span><span>]</span></p>
+					<div class="family-bargain">
+						<!--********家居活动下占据两张图片大的导航图*********-->
+						<div class="family-bargain-block1">
+							<div class="family-top"></div>
+							<div class="family-bottom">
+								<p class="wbot1">
+									<a href="javascript:;">卫浴</a>
+									<a href="javascript:;">床品</a>
+									<a href="javascript:;">办公&礼品</a>
+								</p>
+								<p class="wbot1">
+									<a href="javascript:;">食品</a>
+									<a href="javascript:;">其他</a>
+									<a href="javascript:;">摆件</a>
+									<a href="javascript:;">厨具</a>
+								</p>
+								<p class="wbot1">
+									<a href="javascript:;">家电</a>
+								</p>
+								<p class="wbot3">
+									<a href="javascript:;">查看更多<span>></span></a>
+								</p>
+							</div>
+						</div>
+							<!--第一排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew046.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">HOMES-UP 家居饰品</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew047.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">HOMES-UP餐桌配件</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--第二排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew048.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">LAYTEX & TOM KATE 泰国乳胶枕</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">2.8</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew049.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">THERMOS 膳魔师专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">5.8</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+					</div>
+					<!--*********************婴童活动******************-->
+					<p class="content_tit"><span>[</span><span class="tit">婴童活动</span><span>]</span></p>
+					<div class="child-bargain">
+						<!--********婴童活动下占据两张图片大的导航图*********-->
+						<div class="child-bargain-block1">
+							<div class="child-top"></div>
+							<div class="child-bottom">
+								<p class="wbot1">
+									<a href="javascript:;">服装</a>
+									<a href="javascript:;">鞋履</a>
+									<a href="javascript:;">其他</a>
+									<a href="javascript:;">母婴</a>
+									<a href="javascript:;">玩具</a>
+									<a href="javascript:;">配饰</a>
+								</p>
+								<p class="wbot3">
+									<a href="javascript:;">查看更多<span>></span></a>
+								</p>
+							</div>
+						</div>
+							<!--第一排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew050.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">BIBI  巴西进口女童专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">4.5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew051.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">BIBI  巴西进口男童专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">3.4</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+						<!--第二排的二三张-->
+						<dl class="content-main-block fl havelrmargin">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew052.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1"> HAO  日本潮牌童装女童专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+
+						<dl class="content-main-block fl .clearR">
+							<dt class="content_main_img"><a href="javascipt:;"><img src="/static/images/img/index_dayNew053.jpg"/></a>
+								<a href="javascript:;" class="content_main_goods" style="display: none;">
+									<table style="border-collapse: collapse;border-spacing: 0;">
+										<tr>
+											<td class="content_main_goods_td">
+												<p class="content_main_goods_p1">7天后活动结束</p>
+											</td>
+										</tr>
+									</table>
+								</a>
+							</dt>
+							<dd class="content_main_cen"><a href="javascript:;">
+								<span class="content_main_cen1">HAO  日本潮牌童装男童专场</span>
+								<span class="content_main_span2" style="color:#db2726">
+									<span class="content_main_cen2">5</span>
+									<span class="content_main_cen3">折起</span>
+								</span>
+
+							</a></dd>
+						</dl>
+					</div>
+					<!--*********查看更多********-->
+					<a href="javascript:;" class="look_more">查看更多</a>
+
+				</div>
+			</div>
+
+			<!--************************************即将要开始的活动**********************************************-->
+			<div id="activitiesList">
+				<!--*********************活动即将开始******************-->
+					<p class="content_tit activitiesList_tit"><span>[</span><span class="tit">活动即将开始</span><span>]</span></p>
+					<div class="activitiesList_time">
+						<ul class="activitiesList_day fl">
+							<li class="active"><a href="javascript:;">明天</a></li>
+							<li><a href="javascript:;">周三</a></li>
+							<li><a href="javascript:;">周四</a></li>
+							<li><a href="javascript:;">周五</a></li>
+							<li><a href="javascript:;"  class="border_right">周六</a></li>
+						</ul>
+						<a href="javascript:;" class="activitiesList_update">早上<span class="num">9</span>点上新</a>
+					</div>
+
+					<!--***************品牌内容*************-->
+					<!--选项卡1-->
+					<div class="activity_brand">
+						<!--********************第一排内容**********************-->
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:void(0);" class="take2">订阅</a>
+								</div>
+							</dd>
+
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+						<!--********************第二排内容**********************-->
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+					</div>
+					<!--选项卡2-->
+					<div class="activity_brand" style="display: none;">
+						<!--********************第一排内容**********************-->
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:void(0);" class="take2">订阅</a>
+								</div>
+							</dd>
+
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+						<!--********************第二排内容**********************-->
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<!--选项卡3-->
+					<div class="activity_brand" style="display: none;">
+						<!--********************第一排内容**********************-->
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:void(0);" class="take2">订阅</a>
+								</div>
+							</dd>
+
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<!--选项卡4-->
+					<div class="activity_brand" style="display: none;">
+						<!--********************第一排内容**********************-->
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:void(0);" class="take2">订阅</a>
+								</div>
+							</dd>
+
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+						<!--********************第二排内容**********************-->
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+					</div>
+					<!--选项卡5-->
+					<div class="activity_brand" style="display: none;">
+						<!--********************第一排内容**********************-->
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:void(0);" class="take2">订阅</a>
+								</div>
+							</dd>
+
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+						<!--********************第二排内容**********************-->
+						<dl class="activity_brand_block fl">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+
+						<dl class="activity_brand_block fl lRmargin">
+							<dt class="fl"><img src="/static/images/img/activitiesList_index1.jpg" alt="" /></dt>
+							<dd class="fl">
+								<p class="brand_p1">DAVINES 高口碑小众洗护专场</p>
+								<p class="brand_p2"><span class="em_span">3.2</span><span>折起</span></p>
+								<span class="activity_take_chose"></span>
+							</dd>
+							<dd>
+								<div class="activity_brand_mask" style="display: none;">
+								</div>
+								<div class="activity_brand_take" style="display: none;">
+									<a href="javacript:;" class="take1">预览</a>
+									<span class="spacing">|</span>
+									<a href="javacript:;" class="take2">订阅</a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+			</div>
+		</div>
+
+
+
+
+		<!--网站底部-->
+		<div id=footer-wrap>
+			<div id="footer">
+				<div class="footer_advantage">
+					<ul class="footer_advantage_list">
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv1">100%品牌授权正品</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv2">满688免运费</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv3">7天无条件退货</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv4">超值折扣</a></li>
+						<li class="footer_advantage_li"><a href="javascript:;" class="adv5">9点限时闪购</a></li>
+						<li class="footer_advantage_li footer_advantage_right"><a href="javascript:;" class="adv6">400 - 644 - 6698</a></li>
+					</ul>
+				</div>
+				<p class="footer_link">
+					<a href="javascript:;">关于魅力惠</a>
+					<a href="javascript:;">加入我们</a>
+					<a href="javascript:;">联系我们</a>
+					<a href="javascript:;">使用帮助</a>
+					<a href="javascript:;">使用规则</a>
+					<a href="javascript:;">隐私声明</a>
+					<a href="javascript:;">网站地图</a>
+				</p>
+				<p class="footer_copyright">COPYRIGHT&copy;2016&nbsp;杭州魅俪信息技术有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浙ICP备16004860号-1</p>
+				<p class="footer_license">
+					<a href="javascript:;" class="license1"><img src="/static/images/img/licence1.png" alt="licence1" /></a><a href="javascript:;"><img src="/static/images/img/licence2.png" alt="licence2" /></a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
